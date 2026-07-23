@@ -1,0 +1,123 @@
+body {
+
+    /* The path to your image (can be a local file or a URL) */
+    /*background-image: url('../img/bg01.jpg');*/
+    background-color: beige;
+
+    /* Prevents the image from repeating like a grid */
+    background-repeat: no-repeat;
+
+    /* Centers the image perfectly */
+    background-position: center;
+
+    /* Forces the image to stretch/shrink to cover the entire screen without distorting */
+    background-size: cover;
+
+    /* Keeps the background fixed in place while you scroll */
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Banner Section */
+#banner {
+    background: color #d7c4a0;
+    ;
+    /*color:#fff;
+    height:200px;*/
+}
+
+/* Custom constraints for the navbar logo */
+.navbar-brand img {
+    max-height: 45px;
+    /* Overrides default constraints safely */
+    width: auto;
+    /* Maintains aspect ratio proportions */
+    object-fit: contain;
+    border: solid 3px rgba(255, 255, 255, 0.379);
+}
+
+.navbar {
+    background-color: #9c8b6a;
+}
+
+/* Nav Items sub list bg and font */
+/* Dark dropdown menu */
+.navbar .dropdown-menu {
+    background-color: #9c8b6a;
+    /* Bootstrap dark */
+    border: none;
+}
+
+/* White text inside dropdown */
+.navbar .dropdown-menu .dropdown-item {
+    color: #bbbbbb;
+}
+
+/* hover effect */
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #343a40;
+    /* Slightly lighter dark */
+    color: #bbbbbb;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Button effect */
+.btn {
+    background-color: #f07c23;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 0 !important;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+.btn.active:hover {
+    color: #896302;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    background-color: #2E0014;
+    width: 30%;
+    height: 4px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    background-color: #2E0014;
+    width: 30%;
+    height: 4px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover:before,
+.btn:hover:after,
+.btn.active:before,
+.btn.active:after {
+    width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .btn {
+        margin-bottom: 50px !important;
+    }
+}
+
+/* Footer */
+footer a {
+  text-decoration: none !important;
+}

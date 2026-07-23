@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Print Kobo</title>
+    <link rel="icon" type="image/png" href="img/TPKLogo01.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/mainStyle.css"> <!--common to all page-->
+    <link rel="stylesheet" href="css/home.css"> <!-- For homepage only -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap 5 CSS CDN -->
+</head>
+
+<body>
+    <!-- BANNAR SECTION -->
+    <img src="img/bannertran.png" alt="banner" class="img-fluid w-100" height="200px">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" data-spy="affix" data-offset-top="200">
+        <div class="container">
+            <!--
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="../img/TPKLogo01.png" alt="Logo" class="d-inline-block rounded-pill">
+                Tokyo Print Kobo</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="itemsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-table-list"></i> Items
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="itemsDropdown">
+                            <li><a class="dropdown-item" href="SidebarItem.html">T-shirts</a></li>
+                            <li><a class="dropdown-item" href="#">RobinRuth</a></li>
+                            <li><a class="dropdown-item" href="#">Magnets</a></li>
+                            <li><a class="dropdown-item" href="#">Keychains</a></li>
+                            <li><a class="dropdown-item" href="#">Flag Pin</a></li>
+                            <li><a class="dropdown-item" href="#">Victorinox</a></li>
+                            <li><a class="dropdown-item" href="#">Others..</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#MojikoBranch"><i
+                                class="fa-solid fa-people-group"></i>
+                            Mojiko Branch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#OnlineShop"><i class="fa-solid fa-brush"></i>
+                            オンラインショップ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#onlineShop"><i class="fa-solid fa-bag-shopping"></i>
+                            商品製作</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blogs"><i class="fa-brands fa-blogger-b"></i>
+                            卸売</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#freeDownload"><i
+                                class="fa-solid fa-circle-down"></i>会社情報</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#freeDownload"><i
+                                class="fa-solid fa-circle-down"></i>問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SLIDE SHOW SECTION -->
+    <section class="hero">
+
+        <!-- Slides -->
+        <div class="slides">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+
+                <!-- Blurred background -->
+                <div class="slide-bg" style="background-image:url('img/Tee\ \(1\).png')">
+                </div>
+
+                <!-- Dark overlay -->
+                <div class="overlay"></div>
+
+                <!-- Actual product image -->
+                <img class="product-image" src="img/Tee (1).png" alt="">
+
+                <div class="content">
+                    <h2>Slide One</h2>
+                    <p>
+                        Premium quality product description goes here.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+
+            <div class="slide">
+
+                <!-- Blurred background -->
+                <div class="slide-bg" style="background-image:url('img/Tee\ \(2\).png')">
+                </div>
+
+                <!-- Dark overlay -->
+                <div class="overlay"></div>
+
+                <!-- Actual product image -->
+                <img class="product-image" src="img/Tee (2).png" alt="">
+
+                <div class="content">
+                    <h2>Slide Two</h2>
+                    <p>
+                        Premium quality product description goes here.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+
+            <div class="slide">
+
+                <!-- Blurred background -->
+                <div class="slide-bg" style="background-image:url('img/Tee\ \(3\).JPG')">
+                </div>
+
+                <!-- Dark overlay -->
+                <div class="overlay"></div>
+
+                <!-- Actual product image -->
+                <img class="product-image" src="img/Tee (3).JPG" alt="">
+
+                <div class="content">
+                    <h2>Slide Three</h2>
+                    <p>
+                        Premium quality product description goes here.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Slide 4 -->
+
+            <div class="slide">
+
+                <!-- Blurred background -->
+                <div class="slide-bg" style="background-image:url('img/Tee\ \(4\).JPG')">
+                </div>
+
+                <!-- Dark overlay -->
+                <div class="overlay"></div>
+
+                <!-- Actual product image -->
+                <img class="product-image" src="img/Tee (4).jpg" alt="">
+
+                <div class="content">
+                    <h2>Slide Four</h2>
+                    <p>
+                        Premium quality product description goes here.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Arrows -->
+
+        <button class="arrow prev">&#10094;</button>
+
+        <button class="arrow next">&#10095;</button>
+
+        <!-- Pagination -->
+
+        <div class="dots">
+
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+    </section>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="bg-light py-3 border-bottom">
+        <div class="container py-3">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-dark mb-3">Tokyo Tower 🗼 Souvenir shop</h1>
+                    <p class="lead text-muted mb-4">東京プリント工房は、東京タワー内２階「おみやげたうん」でお土産品を販売するお店です。
+                        We have the souvenir shop in TokyoTower 2F , shpping area .<br>
+
+                        東京プリント工房では、様々なおみやげ商品を取り扱っています。自社デザインのTシャツ、マグネット、ロビン・ルスブランドなど販売しております。
+                        We have several goods , TokyoTower T-shirts , Japan magnets , RobinRuth bags , cap . We will
+                        help you to make a great journey in Japan .</p>
+                    <a href="#features" class="btn btn-cool btn-lg px-4 me-md-2">More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/jfjb9xk34T8?autoplay=1&mute=1" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+    </header>
+
+    <!-- FEATURES GRID CARDS -->
+    <section id="features" class="py-3">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Featured Products</h2>
+                <p class="text-muted">Here is our newest items</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="card border-1" style="background-image: url('img/Tee\ \(1\).png');">
+                        <div class="card-footer">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore et
+                                dolore magna aliqua. Ut enim ad minim.</p>
+                            <a href="#" class="btn btn-cool btn-lg px-4 me-md-2">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-1" style="background-image: url('img/Tee\ \(2\).png');">
+                        <div class="card-footer">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore et
+                                dolore magna aliqua. Ut enim ad minim.</p>
+                            <a href="#" class="btn btn-cool btn-lg px-4 me-md-2">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-1" style="background-image: url('img/Tee\ \(3\).JPG');">
+                        <div class="card-footer">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore et
+                                dolore magna aliqua. Ut enim ad minim.</p>
+                            <a href="#" class="btn btn-cool btn-lg px-4 me-md-2">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FOOTER -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #9c8b6a">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Company Information
+                        </h6>
+                        <p>
+                            ComputerPicture Ltd.
+                            February 14, 1984,Tokyo PrintKobo.
+                            Printing Industry: Planning, Production, and Sales of
+                            Miscellaneous Goods
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                        <p>
+                            <a class="text-white">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a class="text-white">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a class="text-white">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Bootstrap Angular</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a class="text-white">Your Account</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Become an Affiliate</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Shipping Rates</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Help</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i> 〒105-0011<br>
+                            Tokyo, Minato-ku, <br>
+                            4-2-8 Tokyo Tower Building 2F<br>
+                            TEL.03-5401-0335</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> 03-5401-0335</p>
+                        <p><i class="fas fa-print mr-3"></i> 03-5401-0335</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            © 2026 Copyright:
+                            <a class="text-white" href="#">Tokyo Print Kobo</a>
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+    <script src="../js/slideshow.js"></script>
+
+</body>
+
+</html>

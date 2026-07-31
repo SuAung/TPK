@@ -86,19 +86,6 @@
    IMAGE
  */
 
-.slide img {
-
-    
-    height: 100%;
-    width: auto;
-
-    object-fit: contain;
-
-    transform: scale(1.08);
-
-    transition: transform 3s linear;
-}
-
 .slide.active img {
 
     transform: scale(1);
@@ -127,19 +114,29 @@
 
 }
 
-.product-image{
+.product-image {
 
-    position:relative;
+    position: relative;
 
-    width:45%;
+    width: 45%;
 
-    height:auto;
+    height: auto;
 
-    max-height:85%;
+    max-height: 85%;
 
-    object-fit:contain;
+    object-fit: contain;
 
-    z-index:5;
+    z-index: 5;
+
+    transform: scale(1.08);
+
+    transition: transform 3s linear;
+
+}
+
+.slide.active .product-image {
+
+    transform: scale(1);
 
 }
 
@@ -148,6 +145,8 @@
  */
 
 .content{
+
+    
 
     position:relative;
 
@@ -378,31 +377,227 @@
    RESPONSIVE
  */
 
-@media (max-width:992px){
+/* 
+   TABLET
+ */
 
-    .slide{
+@media (max-width: 992px) {
 
-        flex-direction:column-reverse;
+    .slide {
 
-        justify-content:center;
+        flex-direction: column-reverse;
 
-        text-align:center;
+        justify-content: flex-start;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 20px 5% 80px;
 
     }
 
-    .content{
 
-        width:100%;
+    .product-image {
 
-        margin-top:30px;
+        width: 70%;
+
+        height: auto;
+
+        max-height: 48vh;
+
+        object-fit: contain;
+
+        margin-top: 10px;
 
     }
 
-    .product-image{
 
-        width:70%;
+    .content {
 
-        max-height:45vh;
+        width: 100%;
+
+        margin-top: 15px;
+
+    }
+
+
+    .content h2 {
+
+        font-size: 40px;
+
+        font-weight: 300;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .content p {
+
+        max-width: 600px;
+
+        margin: 0 auto;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        height: calc(100vh - 70px);
+
+        min-height: 550px;
+
+    }
+
+
+    .slide {
+
+        padding: 15px 5% 70px;
+
+    }
+
+
+    .product-image {
+
+        width: 65%;
+
+        max-height: 43vh;
+
+        margin-top: 5px;
+
+    }
+
+
+    .content {
+
+        margin-top: 10px;
+
+    }
+
+
+    .content h2 {
+
+        font-size: 32px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .content p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .arrow {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 20px;
+
+    }
+
+
+    .prev {
+
+        left: 12px;
+
+    }
+
+
+    .next {
+
+        right: 12px;
+
+    }
+
+
+    .dots {
+
+        bottom: 20px;
+
+        gap: 8px;
+
+    }
+
+
+    .dot {
+
+        width: 10px;
+
+        height: 10px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+
+        min-height: 500px;
+
+    }
+
+
+    .slide {
+
+        padding-left: 4%;
+
+        padding-right: 4%;
+
+    }
+
+
+    .product-image {
+
+        width: 62%;
+
+        max-height: 38vh;
+
+    }
+
+
+    .content h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .content p {
+
+        font-size: 13px;
+
+        max-width: 90%;
 
     }
 

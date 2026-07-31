@@ -378,7 +378,7 @@
  */
 
 /* 
-   TABLET
+   TABLET/Mobile
  */
 
 @media (max-width: 992px) {
@@ -387,16 +387,22 @@
 
         flex-direction: column-reverse;
 
-        justify-content: flex-start;
+        justify-content: flex-end;
 
         align-items: center;
 
         text-align: center;
 
-        padding: 20px 5% 80px;
+        padding: 30px 5% 60px;
+
+        gap: 25px;
 
     }
 
+
+    /* =========================
+       PRODUCT IMAGE
+    ========================= */
 
     .product-image {
 
@@ -404,20 +410,24 @@
 
         height: auto;
 
-        max-height: 48vh;
+        max-height: 45vh;
 
         object-fit: contain;
 
-        margin-top: 10px;
+        margin: 0;
 
     }
 
+
+    /* =========================
+       CONTENT
+    ========================= */
 
     .content {
 
         width: 100%;
 
-        margin-top: 15px;
+        margin: 0;
 
     }
 
@@ -430,7 +440,7 @@
 
         letter-spacing: 3px;
 
-        margin-bottom: 10px;
+        margin: 0 0 12px;
 
     }
 
@@ -446,28 +456,24 @@
         line-height: 1.6;
 
     }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-
-        height: calc(100vh - 70px);
-
-        min-height: 550px;
-
+    
+    .content h2,
+    .content p {
+        transform: translateY(30px);
     }
 
+}
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
 
     .slide {
 
-        padding: 15px 5% 70px;
+        padding: 20px 5% 50px;
+
+        gap: 20px;
 
     }
 
@@ -476,133 +482,38 @@
 
         width: 65%;
 
-        max-height: 43vh;
-
-        margin-top: 5px;
-
-    }
-
-
-    .content {
-
-        margin-top: 10px;
+        max-height: 40vh;
 
     }
 
 
     .content h2 {
 
-        font-size: 32px;
+        font-size: 30px;
 
         letter-spacing: 2px;
 
-        margin-bottom: 8px;
+        margin-bottom: 10px;
 
     }
 
 
     .content p {
-
-        font-size: 14px;
-
-        line-height: 1.5;
-
-    }
-
-
-    .arrow {
-
-        width: 42px;
-
-        height: 42px;
-
-        font-size: 20px;
-
-    }
-
-
-    .prev {
-
-        left: 12px;
-
-    }
-
-
-    .next {
-
-        right: 12px;
-
-    }
-
-
-    .dots {
-
-        bottom: 20px;
-
-        gap: 8px;
-
-    }
-
-
-    .dot {
-
-        width: 10px;
-
-        height: 10px;
-
-    }
-
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 480px) {
-
-    .hero {
-
-        min-height: 500px;
-
-    }
-
-
-    .slide {
-
-        padding-left: 4%;
-
-        padding-right: 4%;
-
-    }
-
-
-    .product-image {
-
-        width: 62%;
-
-        max-height: 38vh;
-
-    }
-
-
-    .content h2 {
-
-        font-size: 28px;
-
-    }
-
-
-    .content p {
-
-        font-size: 13px;
 
         max-width: 90%;
 
+        font-size: 14px;
+
+        line-height: 1.55;
+
+    }
+
+    .content h2,
+    .content p {
+        transform: translateY(25px);
     }
 
 }
-
 /* Card Style */
 .card {
     height: 400px;

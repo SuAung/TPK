@@ -21,7 +21,7 @@
     <img src="img/bannertran.png" alt="banner" class="img-fluid w-100" height="200px">
 
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" data-spy="affix" data-offset-top="200">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top reveal" data-spy="affix" data-offset-top="200">
         <div class="container">
             <!--
             <a class="navbar-brand fw-bold" href="index.html">
@@ -55,9 +55,11 @@
                             Mojiko Branch</a></li>
                     <li class="nav-item"><a class="nav-link" href="onlineShop.html"><i class="fa-solid fa-brush"></i>
                             オンラインショップ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i class="fa-solid fa-bag-shopping"></i>
+                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i
+                                class="fa-solid fa-bag-shopping"></i>
                             商品製作</a></li>
-                    <li class="nav-item"><a class="nav-link" href="wholesale.html"><i class="fa-brands fa-blogger-b"></i>
+                    <li class="nav-item"><a class="nav-link" href="wholesale.html"><i
+                                class="fa-brands fa-blogger-b"></i>
                             卸売</a></li>
                     <li class="nav-item"><a class="nav-link" href="companyInfo.html"><i
                                 class="fa-solid fa-circle-down"></i>会社情報</a></li>
@@ -68,8 +70,18 @@
         </div>
     </nav>
 
+    <!-- PROMO VID SECTION -->
+
+    <!-- Video Section -->
+    <div class="video-wrapper reveal">
+        <div class="video-title">Tokyo Print Kobo — Introduction Video</div>
+        <video id="tpkVideo" src="img/PRvideo .mp4" muted playsinline></video>
+    </div>
+
+
+
     <!-- SLIDE SHOW SECTION -->
-    <section class="hero">
+    <section class="hero reveal">
 
         <!-- Slides -->
         <div class="slides">
@@ -190,8 +202,8 @@
     <header id="home" class="bg-light py-3 border-bottom">
         <div class="container py-3">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold text-dark mb-3">Tokyo Tower 🗼 Souvenir shop</h1>
+                <div class="col-lg-6 reveal">
+                    <h1 class="display-4 fw-bold text-dark mb-3 ">Tokyo Tower 🗼 Souvenir shop</h1>
                     <p class="lead text-muted mb-4">東京プリント工房は、東京タワー内２階「おみやげたうん」でお土産品を販売するお店です。
                         We have the souvenir shop in TokyoTower 2F , shpping area .<br>
 
@@ -200,12 +212,11 @@
                         help you to make a great journey in Japan .</p>
                     <a href="#features" class="btn btn-cool btn-lg px-4 me-md-2">More</a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/jfjb9xk34T8?autoplay=1&mute=1" allowfullscreen>
                         </iframe>
                     </div>
-
                 </div>
             </div>
     </header>
@@ -213,12 +224,12 @@
     <!-- FEATURES STAFF GRID CARDS -->
     <section id="features" class="py-3">
         <div class="container py-3">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal">
                 <h2 class="fw-bold">Our Team</h2>
                 <p class="text-muted">Here is our team</p>
             </div>
             <div class="row g-5">
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="card border-1" style="background-image: url('img/profile.jpg');">
                         <div class="card-footer">
                             <p>
@@ -231,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="card border-1" style="background-image: url('img/profile.jpg');">
                         <div class="card-footer">
                             <p>
@@ -244,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="card border-1" style="background-image: url('img/profile.jpg');">
                         <div class="card-footer">
                             <p>
@@ -288,7 +299,7 @@
 
                 <h3>Contact Information</h3>
 
-               <!-- Address -->
+                <!-- Address -->
 
                 <div class="contact-item">
 
@@ -304,7 +315,8 @@
                             <i>〒105-0011</i><br>
                             TokyoTower 2F, <br>
                             4-2-8 Shibakoen,<br>
-                            Minato-ku,Tokyo</p>
+                            Minato-ku,Tokyo
+                        </p>
                         </p>
 
                     </div>
@@ -421,7 +433,7 @@
     </footer>
     <!-- Footer -->
     <script src="js/slideshow.js"></script>
-    <script src="/js/announcement.js"></script>
+    <script src="js/scrollup.js"></script>
 
 </body>
 

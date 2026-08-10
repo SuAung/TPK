@@ -1,7 +1,7 @@
 body {
 
     /* The path to your image (can be a local file or a URL) */
-    /*background-image: url('../img/bg01.jpg');*/
+    /*background-image: url('/img/bgGirl01.png');*/
     background-color: beige;
 
     /* Prevents the image from repeating like a grid */
@@ -119,8 +119,44 @@ body {
 
 /* Footer */
 footer a {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
+
+/* PROMO VIDEO SECTION */
+.video-wrapper {
+  max-width: 850px;
+  margin: 30px auto;              /* reduced top/bottom space */
+  padding: 20px;
+  backdrop-filter: blur(18px);    /* glassmorphism */
+  background: rgba(92, 92, 91, 0.276);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: all 0.9s ease;
+}
+
+.video-wrapper.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 14px;
+}
+
 
 
 /* FOOTER */
@@ -174,8 +210,7 @@ footer a {
 
     padding-right: 60px;
 
-    border-right: 1px solid
-        rgba(255,255,255,.15);
+    border-right: 1px solid rgba(255, 255, 255, .15);
 
 }
 
@@ -241,12 +276,11 @@ footer a {
 
     justify-content: center;
 
-    border: 1px solid
-        rgba(255,255,255,.2);
+    border: 1px solid rgba(255, 255, 255, .2);
 
     border-radius: 50%;
 
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, .7);
 
     font-size: 14px;
 
@@ -290,7 +324,7 @@ footer a {
 
     margin: 0;
 
-    color: rgba(255,255,255,.68);
+    color: rgba(255, 255, 255, .68);
 
     font-size: 14px;
 
@@ -301,7 +335,7 @@ footer a {
 
 .contact-text a {
 
-    color: rgba(255,255,255,.68);
+    color: rgba(255, 255, 255, .68);
 
     text-decoration: none;
 
@@ -321,8 +355,7 @@ footer a {
 
 .footer-social-section {
 
-    border-top: 1px solid
-        rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255, 255, 255, .1);
 
     padding: 28px 20px;
 
@@ -358,12 +391,11 @@ footer a {
 
     justify-content: center;
 
-    border: 1px solid
-        rgba(255,255,255,.2);
+    border: 1px solid rgba(255, 255, 255, .2);
 
     border-radius: 50%;
 
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, .7);
 
     text-decoration: none;
 
@@ -397,8 +429,7 @@ footer a {
 
 .footer-copyright {
 
-    border-top: 1px solid
-        rgba(255,255,255,.06);
+    border-top: 1px solid rgba(255, 255, 255, .06);
 
     padding: 20px;
 
@@ -411,7 +442,7 @@ footer a {
 
     margin: 0;
 
-    color: rgba(255,255,255,.4);
+    color: rgba(255, 255, 255, .4);
 
     font-size: 12px;
 
@@ -473,8 +504,7 @@ footer a {
 
         border-right: none;
 
-        border-bottom: 1px solid
-            rgba(255,255,255,.15);
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
 
     }
 
@@ -626,4 +656,16 @@ footer a {
 
     }
 
+}
+
+/* Scroll Up effect */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

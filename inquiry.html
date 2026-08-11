@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/inquiryForm.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -69,16 +70,193 @@
 
     <!-- Information Section -->
 
-    <section class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center mb-5">
-                    <h1 class="display-4 font-weight-bolder">Page for Inquiry.</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p>
+    <!-- FORM -->
+    <main id="formScreen">
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="eyebrow">CONTACT US</div>
+                <h1>お問い合わせ</h1>
+                <p>
+                    商品・サービスに関するご質問やご相談など、お気軽にお問い合わせください。<br>
+                    下記フォームに必要事項をご入力のうえ、確認画面へお進みください。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container container-narrow">
+                <div class="intro">
+                    <h2>Contact Form</h2>
+                    <div class="rule"></div>
+                    <p>お問い合わせ内容を入力してください。</p>
+                </div>
+
+                <div class="steps">
+                    <div class="step active"><span class="circle">1</span>入力</div>
+                    <span class="step-line"></span>
+                    <div class="step"><span class="circle">2</span>確認</div>
+                    <span class="step-line"></span>
+                    <div class="step"><span class="circle">3</span>完了</div>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <h3>お問い合わせ情報</h3>
+                        <p><span class="badge-required">必須</span> は必須項目です</p>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+
+                        <div class="field">
+                            <label class="label" for="company">
+                                会社名 <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="company" type="text" placeholder="例：株式会社〇〇">
+                            <div class="error" id="companyError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="companyKana">
+                                会社名（フリガナ） <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="companyKana" type="text" placeholder="例：カブシキガイシャ〇〇">
+                            <div class="error" id="companyKanaError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="person">
+                                担当者名前 <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="person" type="text" placeholder="例：山田 太郎">
+                            <div class="error" id="personError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="personKana">
+                                担当者名前（フリガナ） <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="personKana" type="text" placeholder="例：ヤマダ タロウ">
+                            <div class="error" id="personKanaError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="email">
+                                メールアドレス <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="email" type="email" placeholder="例：example@company.co.jp">
+                            <div class="error" id="emailError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="emailConfirm">
+                                メールアドレス（確認） <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="emailConfirm" type="email"
+                                placeholder="メールアドレスをもう一度入力してください">
+                            <div class="help">※ 確認のため、上記と同じメールアドレスを入力してください。</div>
+                            <div class="error" id="emailConfirmError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="phone">
+                                電話番号 <span class="badge-required">必須</span>
+                            </label>
+                            <input class="form-control" id="phone" type="tel" placeholder="例：03-1234-5678">
+                            <div class="error" id="phoneError"></div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="inquiry">
+                                お問い合わせ内容 <span class="badge-required">必須</span>
+                            </label>
+                            <textarea class="form-control" id="inquiry" maxlength="2000"
+                                placeholder="お問い合わせ内容をご入力ください。"></textarea>
+                            <div class="d-flex justify-content-between help">
+                                <span>ご質問・ご相談内容などをご記入ください。</span>
+                                <span><b id="count">0</b> / 2000</span>
+                            </div>
+                            <div class="error" id="inquiryError"></div>
+                        </div>
+
+                        <div class="privacy">
+                            <h4>個人情報の取り扱いについて</h4>
+                            <p>
+                                お問い合わせフォームから取得した個人情報は、お問い合わせへの回答および
+                                ご連絡のために利用いたします。取得した情報は適切に管理し、本人の同意なく
+                                第三者へ提供することはありません。
+                            </p>
+                        </div>
+
+                        <div class="agree">
+                            <input type="checkbox" id="privacy" class="form-check-input me-1">
+                            <label for="privacy">個人情報の取り扱いに同意します。</label>
+                            <div class="error" id="privacyError"></div>
+                        </div>
+
+                        <div class="actions">
+                            <button class="btn-main" type="submit">入力内容を確認する　→</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <!-- CONFIRMATION -->
+    <main id="confirmScreen" class="d-none">
+        <section class="hero">
+            <div class="container">
+                <div class="eyebrow">CONFIRMATION</div>
+                <h1>入力内容の確認</h1>
+                <p>ご入力いただいた内容をご確認ください。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container container-narrow">
+                <div class="intro">
+                    <h2>Confirmation</h2>
+                    <div class="rule"></div>
+                    <p>内容に間違いがなければ「送信する」を押してください。</p>
+                </div>
+
+                <div class="steps">
+                    <div class="step"><span class="circle">1</span>入力</div>
+                    <span class="step-line"></span>
+                    <div class="step active"><span class="circle">2</span>確認</div>
+                    <span class="step-line"></span>
+                    <div class="step"><span class="circle">3</span>完了</div>
+                </div>
+
+                <div class="confirm-card" id="confirmData"></div>
+
+                <div class="actions d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="btn-back" type="button" onclick="edit()">← 修正する</button>
+                    <button class="btn-main" type="button" onclick="complete()">送信する　→</button>
+                </div>
+
+                <div class="note">※ 現在は画面の動作確認用です。実際のメール送信は行いません。</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- THANK YOU -->
+    <main id="completeScreen" class="d-none">
+        <section class="thank">
+            <div class="thank-box">
+                <div class="thank-icon">✓</div>
+                <div class="eyebrow">THANK YOU</div>
+                <h2>お問い合わせ<br>ありがとうございました。</h2>
+                <p>
+                    お問い合わせを受け付けました。<br>
+                    内容を確認のうえ、担当者よりご連絡させていただきます。
+                </p>
+                <div class="actions">
+                    <button class="btn-main" type="button" onclick="resetToForm()">← Home</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- 4. FOOTER -->
     <!-- Footer -->
@@ -241,6 +419,7 @@
         <!-- Bootstrap 5 JavaScript Bundle CDN -->
         <script src="https://jsdelivr.net"></script>
         <script src="js/scrollup.js"></script>
+        <script src="js/inquiryJs.js"></script>
 </body>
 
 </html>

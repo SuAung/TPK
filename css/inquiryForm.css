@@ -1,0 +1,201 @@
+:root{
+  --ink:#202522;
+  --muted:#68706b;
+  --green:#5f8b75;
+  --green-dark:#456b58;
+  --sage:#edf3ef;
+  --cream:#f7f6f1;
+  --line:#dfe5e1;
+  --red:#d95850;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  letter-spacing:.02em;
+}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{
+  height:78px;
+  border-bottom:1px solid #edf0ed;
+  background:rgba(255,255,255,.96);
+  display:flex;align-items:center;
+}
+.logo{
+  font-family:Georgia,serif;
+  font-size:1.15rem;
+  letter-spacing:.12em;
+  font-weight:600;
+}
+.logo-mark{
+  width:38px;height:38px;border:1px solid var(--green);
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-right:10px;color:var(--green);font-size:.68rem;
+}
+.nav a{font-size:.82rem;color:#505650;margin-left:30px}
+.nav a:hover{color:var(--green)}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,#eef4f0 0%,#f7f5ef 100%);
+  padding:70px 0 68px;
+  position:relative;overflow:hidden;
+}
+.hero:after{
+  content:"CONTACT";
+  position:absolute;right:-20px;bottom:-38px;
+  font:600 clamp(5rem,14vw,12rem)/1 Georgia,serif;
+  color:rgba(95,139,117,.055);
+}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{
+  color:var(--green);font-size:.78rem;letter-spacing:.25em;
+  font-weight:700;margin-bottom:12px;
+}
+.hero h1{
+  font:400 clamp(2.5rem,6vw,4.5rem)/1.15 Georgia,"Yu Mincho",serif;
+  margin:0 0 18px;
+}
+.hero p{color:var(--muted);line-height:1.9;margin:0;max-width:680px}
+
+/* Sections */
+.section{padding:72px 0 90px}
+.container-narrow{max-width:900px}
+.intro{text-align:center;margin-bottom:48px}
+.intro h2{
+  font:400 2rem Georgia,"Yu Mincho",serif;
+  margin:0 0 14px;
+}
+.intro .rule{width:48px;height:2px;background:var(--green);margin:0 auto 20px}
+.intro p{color:var(--muted);line-height:1.9;margin:0}
+
+/* Step indicator */
+.steps{
+  display:flex;justify-content:center;align-items:center;
+  margin-bottom:50px;
+}
+.step{
+  display:flex;align-items:center;color:#a1aaa4;font-size:.78rem;
+}
+.step .circle{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid #cbd4ce;display:flex;align-items:center;justify-content:center;
+  margin-right:8px;background:#fff;
+}
+.step.active{color:var(--green);font-weight:700}
+.step.active .circle{background:var(--green);border-color:var(--green);color:#fff}
+.step-line{width:70px;height:1px;background:#d8dfda;margin:0 14px}
+
+/* Form card */
+.form-card{
+  background:#fff;border:1px solid var(--line);
+  box-shadow:0 18px 55px rgba(36,52,43,.07);
+  padding:42px 48px;
+}
+.form-card-header{
+  display:flex;justify-content:space-between;gap:20px;
+  align-items:end;padding-bottom:25px;margin-bottom:28px;
+  border-bottom:1px solid #e8ece9;
+}
+.form-card-header h3{font-size:1.15rem;margin:0;font-weight:700}
+.form-card-header p{margin:0;color:var(--muted);font-size:.78rem}
+.field{margin-bottom:26px}
+.label{
+  display:flex;align-items:center;gap:8px;
+  font-size:.88rem;font-weight:700;margin-bottom:9px;
+}
+.badge-required{
+  font-size:.64rem;background:var(--red);color:#fff;
+  padding:3px 7px;border-radius:2px;font-weight:600;
+}
+.form-control{
+  min-height:50px;border:1px solid #d8dfda;border-radius:3px;
+  padding:12px 15px;background:#fff;
+}
+.form-control::placeholder{color:#aab0ac}
+.form-control:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 3px rgba(95,139,117,.12)
+}
+textarea.form-control{min-height:190px;resize:vertical}
+.help{font-size:.72rem;color:#8a938d;margin-top:7px}
+.error{font-size:.75rem;color:var(--red);margin-top:6px;min-height:1em}
+
+/* privacy */
+.privacy{
+  background:var(--sage);padding:20px 22px;margin-top:8px;
+  border:1px solid #dce8e0;
+}
+.privacy h4{font-size:.85rem;margin:0 0 9px}
+.privacy p{font-size:.72rem;line-height:1.8;color:#68736c;margin:0}
+.agree{text-align:center;margin-top:18px;font-size:.8rem}
+.agree .error{margin-top:5px}
+
+/* Buttons */
+.actions{text-align:center;margin-top:35px}
+.btn-main{
+  min-width:250px;padding:15px 25px;border:0;border-radius:3px;
+  background:var(--green);color:#fff;font-weight:700;
+  letter-spacing:.08em;transition:.2s;
+}
+.btn-main:hover{background:var(--green-dark);color:#fff}
+.btn-back{
+  min-width:170px;padding:14px 22px;border:1px solid #bfcac3;
+  border-radius:3px;background:#fff;color:#526057;font-weight:600;
+}
+.btn-back:hover{background:#f3f6f4}
+
+/* Confirmation */
+.confirm-card{border:1px solid var(--line);overflow:hidden}
+.confirm-row{display:grid;grid-template-columns:230px 1fr;border-bottom:1px solid var(--line)}
+.confirm-row:last-child{border-bottom:0}
+.confirm-label{
+  background:#f5f8f6;padding:18px 22px;font-weight:700;font-size:.85rem;
+}
+.confirm-value{padding:18px 22px;line-height:1.75;white-space:pre-wrap;word-break:break-word}
+.note{text-align:center;color:#8a938d;font-size:.72rem;margin-top:20px}
+
+/* Thank you */
+.thank{
+  text-align:center;padding:100px 20px 120px;
+  min-height:55vh;display:flex;align-items:center;justify-content:center;
+}
+.thank-box{max-width:760px;width:100%}
+.thank-icon{
+  width:64px;height:64px;border:1px solid var(--green);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 25px;color:var(--green);font-size:1.5rem;
+}
+.thank .eyebrow{margin-bottom:12px}
+.thank h2{font:400 clamp(2rem,5vw,3.3rem) Georgia,"Yu Mincho",serif;margin-bottom:25px}
+.thank p{color:var(--muted);line-height:2}
+
+/* Footer */
+.footer{
+  background:#f3f0e8;padding:32px 0;color:#59615c;text-align:center;
+}
+.footer-links{font-size:.76rem;margin-bottom:13px}
+.footer-links a{margin:0 12px}
+.footer small{color:#8b918d}
+
+@media(max-width:767px){
+  .header{height:auto;padding:17px 0}
+  .nav{display:none}
+  .hero{padding:52px 0}
+  .section{padding:50px 15px 65px}
+  .steps{margin-bottom:35px}
+  .step-line{width:25px;margin:0 7px}
+  .step{font-size:.67rem}
+  .step .circle{width:30px;height:30px}
+  .form-card{padding:27px 20px}
+  .form-card-header{display:block}
+  .form-card-header p{margin-top:8px}
+  .confirm-row{grid-template-columns:1fr}
+  .confirm-label{padding-bottom:9px}
+  .confirm-value{padding-top:9px}
+  .thank{padding:70px 15px}
+}

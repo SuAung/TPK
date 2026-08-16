@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/companyinfo.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -31,6 +32,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>
                             Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="allItems.html"><i class="fa-solid fa-table-list"></i>
+                            Products</a></li>
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="itemsDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,37 +49,144 @@
                             <li><a class="dropdown-item" href="#">Victorinox</a></li>
                             <li><a class="dropdown-item" href="#">Others..</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li class="nav-item"><a class="nav-link" href="mjkbranch.html"><i
                                 class="fa-solid fa-people-group"></i>
                             Mojiko Branch</a></li>
-                    <li class="nav-item"><a class="nav-link" href="onlineShop.html"><i class="fa-solid fa-brush"></i>
+                    <li class="nav-item"><a class="nav-link" href="onlineShop.html"><i class="fa-solid fa-store"></i>
                             オンラインショップ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i class="fa-solid fa-bag-shopping"></i>
+                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i
+                                class="fa-solid fa-industry"></i>
                             商品製作</a></li>
-                    <li class="nav-item"><a class="nav-link" href="wholesale.html"><i class="fa-brands fa-blogger-b"></i>
+                    <li class="nav-item"><a class="nav-link" href="wholesale.html"><i class="fa-brands fa-shopify"></i>
                             卸売</a></li>
                     <li class="nav-item"><a class="nav-link" href="companyInfo.html"><i
-                                class="fa-solid fa-circle-down"></i>会社情報</a></li>
+                                class="fa-solid fa-circle-info"></i>
+                            会社情報</a></li>
                     <li class="nav-item"><a class="nav-link" href="inquiry.html"><i
-                                class="fa-solid fa-circle-down"></i>問い合わせ</a></li>
+                                class="fa-solid fa-square-envelope"></i>
+                            問い合わせ</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Information Section -->
+    <!-- COMPANY INFORMATION -->
 
-    <section class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center mb-5">
-                    <h1 class="display-4 font-weight-bolder">Page for Company Information.</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p>
-                </div>
-            </div>
+    <section class="page-hero">
+        <div class="hero-pattern"></div>
+        <div class="container hero-content">
+            <p class="eyebrow">ABOUT OUR COMPANY</p>
+            <h1>会社概要 <span>About us</span></h1>
+            <p class="hero-lead">Tokyo Print Kobo — creating souvenirs and memories around Tokyo Tower.</p>
         </div>
     </section>
+
+    <main>
+        <section class="section about-section">
+            <div class="container narrow">
+                <div class="section-heading"><span class="section-number">01</span>
+                    <div>
+                        <p class="section-kicker">ABOUT US</p>
+                        <h2>会社概要 <span>About us</span></h2>
+                    </div>
+                </div>
+                <div class="about-copy">
+                    <p>創業1977年。創業以来、東京タワー一筋で店舗営業してきました。東京タワービル3階でお客様の来塔記念として、お店で撮影したお客様の写真をカレンダー等に加工し、販売してきました。</p>
+                    <p class="english">It's 1977 that our company was founded. Since then, we have been running a
+                        business in Tokyo Tower. When we started, we made a lot of calendars on which passenger's face
+                        were put. It was a good selling at that time.</p>
+                    <div class="about-divider"></div>
+                    <p>現在では、タワービル二階の「おみやげタウン」でお土産を販売しています。また、その他の事業として卸売業も営んでおります。</p>
+                    <p class="english">Nowadays, our shop is on second floor, selling many souvenir goods. We also do
+                        wholesale business in other place.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section company-section">
+            <div class="container">
+                <div class="section-heading"><span class="section-number">02</span>
+                    <div>
+                        <p class="section-kicker">COMPANY PROFILE</p>
+                        <h2>会社詳細 <span>Company Information</span></h2>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="table-intro"><span>COMPANY DETAILS</span>
+                        <p>会社に関する基本情報をご案内します。</p>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="company-table">
+                            <tbody>
+                                <tr>
+                                    <th>会社名<br><span>Company name</span></th>
+                                    <td>有限会社コンピューターピクチャー<br>ComputerPicture Ltd.</td>
+                                </tr>
+                                <tr>
+                                    <th>設立年月日<br><span>Established</span></th>
+                                    <td>昭和59年2月14日<br>February 14, 1984</td>
+                                </tr>
+                                <tr>
+                                    <th>店舗名<br><span>Shop name</span></th>
+                                    <td>東京プリント工房<br>TokyoPrintKobo</td>
+                                </tr>
+                                <tr>
+                                    <th>本店所在地<br><span>Address</span></th>
+                                    <td>〒105-0011<br>東京都港区芝公園四丁目2番地8号<br>日本電波塔ビルディング2階<br>2F Tokyo Tower, 4-2-8
+                                        Shibakoen Minatoku, Tokyo, Japan<br>105-0011</td>
+                                </tr>
+                                <tr>
+                                    <th>電話<br><span>Tel</span></th>
+                                    <td>03-5401-0335</td>
+                                </tr>
+                                <tr>
+                                    <th>代表者<br><span>President</span></th>
+                                    <td>斎藤久利<br>Hisatoshi Saito</td>
+                                </tr>
+                                <tr>
+                                    <th>資本金<br><span>Capital</span></th>
+                                    <td>500万円</td>
+                                </tr>
+                                <tr>
+                                    <th>従業員数<br><span>Employees</span></th>
+                                    <td>4名</td>
+                                </tr>
+                                <tr>
+                                    <th>事業内容<br><span>Business</span></th>
+                                    <td>印刷業<br>雑貨の企画・制作・販売</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partners-section">
+            <div class="container narrow">
+                <div class="section-heading"><span class="section-number">03</span>
+                    <div>
+                        <p class="section-kicker">BUSINESS PARTNERS</p>
+                        <h2>主な取引先 <span>Business partners</span></h2>
+                    </div>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-copy">
+                        <p class="partner-intro">主な取引先・ビジネスパートナー</p>
+                        <ul>
+                            <li>株式会社 TOKYOTOWER</li>
+                            <li>有限会社 B.I通商</li>
+                        </ul>
+                    </div>
+                    <div class="partner-logo"><img src="img/CPLogo.png"
+                            alt="ComputerPicture Ltd. company logo">
+                        <p>有限会社コンピューターピクチャーのロゴです</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- 4. FOOTER -->
     <!-- Footer -->
@@ -103,7 +214,7 @@
 
                 <h3>Contact Information</h3>
 
-               <!-- Address -->
+                <!-- Address -->
 
                 <div class="contact-item">
 
@@ -119,7 +230,8 @@
                             <i>〒105-0011</i><br>
                             TokyoTower 2F, <br>
                             4-2-8 Shibakoen,<br>
-                            Minato-ku,Tokyo</p>
+                            Minato-ku,Tokyo
+                        </p>
                         </p>
 
                     </div>
@@ -232,11 +344,11 @@
             </p>
 
         </div>
-    <!-- Footer -->
+        <!-- Footer -->
 
-    <!-- Bootstrap 5 JavaScript Bundle CDN -->
-    <script src="https://jsdelivr.net"></script>
-    <script src="js/scrollup.js"></script>
+        <!-- Bootstrap 5 JavaScript Bundle CDN -->
+        <script src="https://jsdelivr.net"></script>
+        <script src="js/scrollup.js"></script>
 
 </body>
 

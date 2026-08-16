@@ -42,31 +42,31 @@ body {
 
 /* Nav Items sub list bg and font */
 /* Dark dropdown menu */
-.navbar .dropdown-menu {
+/* .navbar .dropdown-menu {
     background-color: #9c8b6a;
-    /* Bootstrap dark */
+    
     border: none;
-}
+} */
 
 /* White text inside dropdown */
-.navbar .dropdown-menu .dropdown-item {
+/* .navbar .dropdown-menu .dropdown-item {
     color: #bbbbbb;
 }
-
+ */
 /* hover effect */
-.navbar .dropdown-menu .dropdown-item:hover {
+/* .navbar .dropdown-menu .dropdown-item:hover {
     background-color: #343a40;
-    /* Slightly lighter dark */
+   
     color: #bbbbbb;
-}
+} */
 
-.navbar .dropdown-menu .dropdown-item {
+/* .navbar .dropdown-menu .dropdown-item {
     transition: background-color 0.2s ease, color 0.2s ease;
-}
+} */
 
 /* Button effect */
 .btn {
-    background-color: #f07c23;
+    background-color: #9c551f;
     color: #fff;
     font-size: 20px;
     font-weight: 800;
@@ -79,7 +79,7 @@ body {
 
 .btn:hover,
 .btn.active:hover {
-    color: #896302;
+    color: #896302c6;
 }
 
 .btn:before {

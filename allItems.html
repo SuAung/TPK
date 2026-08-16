@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shop</title>
-    <link rel="icon" type="image/png" href="../img/TPKLogo01.png">
+    <title>Tokyo Print Kobo</title>
+    <link rel="icon" type="image/png" href="img/TPKLogo01.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/allItems.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap 5 CSS CDN -->
 </head>
 
 <body>
@@ -23,11 +26,11 @@
             <!--
             <a class="navbar-brand fw-bold" href="index.html">
                 <img src="../img/TPKLogo01.png" alt="Logo" class="d-inline-block rounded-pill rounded-circle">
-                Tokyo Print Kobo</a>-->
+                Tokyo Print Kobo</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>
                             Home</a></li>
@@ -68,18 +71,65 @@
         </div>
     </nav>
 
-    <!-- Information Section -->
+    <!-- Sidebar and Products Grid -->
 
-    <section class="wrapper">
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="eyebrow">OUR COLLECTION</div>
+            <h1>Souvenir Collection</h1>
+            <p>Discover thoughtfully designed souvenirs that bring a little piece of the local experience home with you.
+            </p>
+            <div class="hero-badge">✦ Tokyo Tower Souvenir &nbsp;/&nbsp; Made for memories</div>
+        </div>
+    </section>
+    <section class="store">
         <div class="container">
-            <div class="row">
-                <div class="col text-center mb-5">
-                    <h1 class="display-4 font-weight-bolder">Page for OnlineShop</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p>
-                </div>
+            <div class="layout">
+                <aside class="sidebar">
+                    <div class="sidebar-title">Categories</div>
+                    <div class="category-list" id="categories"></div>
+                </aside>
+                <main>
+                    <div class="catalog-head">
+                        <div>
+                            <h2 id="catalogTitle">All Products</h2>
+                            <p id="resultText"></p>
+                        </div>
+                        <select class="sort-select" id="sortSelect">
+                            <option value="default">Featured</option>
+                            <option value="priceLow">Price: Low to High</option>
+                            <option value="priceHigh">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="product-grid" id="productGrid"></div>
+                    <div class="pagination-wrap">
+                        <ul class="pagination" id="pagination"></ul>
+                    </div>
+                </main>
             </div>
         </div>
     </section>
+    
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content"><button class="modal-close" data-bs-dismiss="modal">×</button>
+                <div class="modal-product">
+                    <div class="modal-image"><img id="modalImage"></div>
+                    <div class="modal-details">
+                        <div class="modal-category" id="modalCategory"></div>
+                        <h2 class="modal-title" id="modalTitle"></h2>
+                        <div class="modal-price" id="modalPrice"></div>
+                        <p class="modal-desc" id="modalDescription"></p>
+                        <div class="detail-row"><strong>Size</strong><span id="modalSize"></span></div>
+                        <div class="detail-row"><strong>Color</strong><span id="modalColor"></span></div>
+                        <div class="mt-4"><button class="btn btn-outline-secondary btn-sm px-4"
+                                data-bs-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 4. FOOTER -->
     <!-- Footer -->
@@ -242,6 +292,7 @@
         <!-- Bootstrap 5 JavaScript Bundle CDN -->
         <script src="https://jsdelivr.net"></script>
         <script src="js/scrollup.js"></script>
+        <script src="js/allItems.js"></script>
 </body>
 
 </html>

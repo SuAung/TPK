@@ -12,7 +12,7 @@
 body{
   margin:0;
   color:var(--ink);
-  background:#fff;
+  background:beige;
   font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
   letter-spacing:.02em;
 }
@@ -41,7 +41,7 @@ a{text-decoration:none;color:inherit}
 
 /* Hero */
 .hero{
-  background:linear-gradient(135deg,#eef4f0 0%,#f7f5ef 100%);
+  background:linear-gradient(135deg, #decfa5 0%, #eae9e7 100%);
   padding:70px 0 68px;
   position:relative;overflow:hidden;
 }

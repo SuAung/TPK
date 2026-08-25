@@ -23,7 +23,7 @@ app.post("/send-email", async (req, res) => {
         service: "gmail",
         auth: {
             user: "tokyoprintkobo@gmail.com", /* Add an email that was used to create app pass code */
-            pass: "aygb zncw vttv secc" /* App passcode here */
+            pass: "bwcy fchi tath mdvx" /* App passcode here */
         }
     });
 

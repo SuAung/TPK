@@ -22,15 +22,15 @@ app.post("/send-email", async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "tokyoprintkobo@gmail.com", /* Add an email that was used to create app pass code */
-            pass: "bwcy fchi tath mdvx" /* App passcode here */
+            user: "susuaung87@gmail.com", /* Add an email that was used to create app pass code */
+            pass: "aygb zncw vttv secc" /* App passcode here */
         }
     });
 
     const mailOptions = {
-        from: `"TPKホームお問い合わせ" <tokyoprintkobo@gmail.com>`,
+        from: `"TPKホームお問い合わせ" <susuaung87@gmail.com>`,
         replyTo: email, /* Used to reply the inquiry */
-        to: "tokyoprintkobo@gmail.com", /* Change the receiver email address here */
+        to: "susuaung87@gmail.com", /* Change the receiver email address here */
         subject: "新しいお問い合わせが届きました",
         text: `
 会社名: ${company}

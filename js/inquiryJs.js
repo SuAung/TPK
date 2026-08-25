@@ -87,23 +87,48 @@ function edit(){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-function complete(){
-  // UI only. Real email sending will be connected later.
-  document.getElementById("confirmScreen").classList.add("d-none");
-  document.getElementById("formScreen").classList.add("d-none");
-  document.getElementById("completeScreen").classList.remove("d-none");
-  window.scrollTo({top:0,behavior:"smooth"});
+async function complete() {
+  // Collect form values
+  const data = {
+    company: val("company"),
+    companyKana: val("companyKana"),
+    person: val("person"),
+    personKana: val("personKana"),
+    email: val("email"),
+    phone: val("phone"),
+    inquiry: val("inquiry")
+  };
+
+  // Send to backend
+  try {
+    const response = await fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      // Show complete screen
+      document.getElementById("confirmScreen").classList.add("d-none");
+      document.getElementById("formScreen").classList.add("d-none");
+      document.getElementById("completeScreen").classList.remove("d-none");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      alert("メール送信に失敗しました。もう一度お試しください。");
+    }
+
+  } catch (error) {
+    alert("サーバーに接続できません。もう一度お試しください。");
+    console.error(error);
+  }
 }
 
-function resetToForm(e){
-  if(e) e.preventDefault();
-  document.getElementById("confirmScreen").classList.add("d-none");
-  document.getElementById("completeScreen").classList.add("d-none");
-  document.getElementById("formScreen").classList.remove("d-none");
-  form.reset();
-  document.getElementById("count").textContent="0";
-  document.querySelectorAll(".error").forEach(x=>x.textContent="");
-  window.scrollTo({top:0,behavior:"smooth"});
+
+function goHome(e){
+  // If you want to ALWAYS go home:
+  window.location.href = "index.html";
   return false;
 }
 

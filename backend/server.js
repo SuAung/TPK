@@ -1,38 +1,30 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import { Resend } from "resend";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
+}));
+
+app.options("*", cors()); // VERY IMPORTANT
 app.use(express.json());
 
+// Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 app.post("/send-email", async (req, res) => {
-    console.log("Received data:", req.body);
-    const {
-        company,
-        companyKana,
-        person,
-        personKana,
-        email,
-        phone,
-        inquiry
-    } = req.body;
+  const { company, companyKana, person, personKana, email, phone, inquiry } = req.body;
 
-    console.log("Attempting to send email...");
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: "susuaung87@gmail.com", /* Add an email that was used to create app pass code */
-            pass: "aygb zncw vttv secc" /* App passcode here */
-        }
-    });
-
-    const mailOptions = {
-        from: `"TPKホームお問い合わせ" <susuaung87@gmail.com>`,
-        replyTo: email, /* Used to reply the inquiry */
-        to: "susuaung87@gmail.com", /* Change the receiver email address here */
-        subject: "新しいお問い合わせが届きました",
-        text: `
+  try {
+    const result = await resend.emails.send({
+      from: "TPKホームお問い合わせ <susuaung87@gmail.com>",
+      to: "susuaung87@gmail.com",
+      reply_to: email,
+      subject: "新しいお問い合わせが届きました",
+      text: `
 会社名: ${company}
 会社名（フリガナ）: ${companyKana}
 担当者名前: ${person}
@@ -42,23 +34,18 @@ app.post("/send-email", async (req, res) => {
 
 お問い合わせ内容:
 ${inquiry}
-  `
-    };
+      `
+    });
 
+    console.log("Email sent:", result);
+    res.json({ success: true });
 
-    try {
-
-        await transporter.sendMail(mailOptions);
-        console.log("Email sent successfully!");
-        res.json({ success: true });
-    } catch (error) {
-        console.error("Email sending failed:", error);
-        res.json({ success: false, error });
-    }
+  } catch (error) {
+    console.error("Email sending failed:", error);
+    res.json({ success: false });
+  }
 });
 
-
-app.listen(process.env.PORT || 3000, () =>
-  console.log(`Backend running on port ${process.env.PORT || 3000}`)
-);
-
+// Render uses PORT environment variable
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));

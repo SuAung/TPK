@@ -88,6 +88,8 @@ function edit(){
 }
 
 async function complete() {
+
+  console.log("We are in complete function....");
   // Collect form values
   const data = {
     company: val("company"),
@@ -98,15 +100,16 @@ async function complete() {
     phone: val("phone"),
     inquiry: val("inquiry")
   };
-
+  console.log("Before try....");
   // Send to backend
   try {
-    const response = await fetch("https://tpk-backend.onrender.com/send-email", {
+    console.log("Trying to reach to backend....");
+    const response = await fetch("https://tpkobo.onrender.com/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
-
+    console.log("Backend Reached!");
     const result = await response.json();
 
     if (result.success) {

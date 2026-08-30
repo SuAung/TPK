@@ -20,7 +20,7 @@ app.post("/send-email", async (req, res) => {
 
   try {
     const result = await resend.emails.send({
-      from: "TPKホームお問い合わせ <noreply@tpkobo.onresend.com>",
+      from: "TPKホームお問い合わせ <noreply@onresend.com>",
       to: "susuaung87@gmail.com",
       reply_to: email,
       subject: "新しいお問い合わせが届きました",

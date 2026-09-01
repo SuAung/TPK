@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import nodemailer from "nodemailer";
+import axios from "axios";
 
 const app = express();
 app.use(express.json());
@@ -12,43 +12,59 @@ app.use(cors({
 }));
 app.options("*", cors());
 
-// Gmail App Password transporter (HTTPS, not SMTP ports)
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_SENDER,
-    pass: process.env.GMAIL_APP_PASSWORD
-  }
-});
+// Gmail API endpoint (HTTPS)
+const GMAIL_API_URL = "https://gmail.googleapis.com/gmail/v1/users/me/messages/send";
+
+// Base64URL encoding helper
+function encodeMessage(message) {
+  return Buffer.from(message)
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
 
 app.post("/send-email", async (req, res) => {
   const { company, companyKana, person, personKana, email, phone, inquiry } = req.body;
 
   try {
-    const mailOptions = {
-      from: process.env.GMAIL_SENDER,
-      to: process.env.GMAIL_SENDER,
-      replyTo: email,
-      subject: "新しいお問い合わせが届きました",
-      text: `
-会社名: ${company}
-会社名（フリガナ）: ${companyKana}
-担当者名前: ${person}
-担当者名前（フリガナ）: ${personKana}
-メールアドレス: ${email}
-電話番号: ${phone}
+    const message = [
+      `From: ${process.env.GMAIL_SENDER}`,
+      `To: ${process.env.GMAIL_SENDER}`,
+      `Reply-To: ${email}`,
+      "Subject: 新しいお問い合わせが届きました",
+      "",
+      `会社名: ${company}`,
+      `会社名（フリガナ）: ${companyKana}`,
+      `担当者名前: ${person}`,
+      `担当者名前（フリガナ）: ${personKana}`,
+      `メールアドレス: ${email}`,
+      `電話番号: ${phone}`,
+      "",
+      "お問い合わせ内容:",
+      inquiry
+    ].join("\n");
 
-お問い合わせ内容:
-${inquiry}
-      `
-    };
+    const rawMessage = encodeMessage(message);
 
-    await transporter.sendMail(mailOptions);
+    // Gmail API call using App Password (HTTPS)
+    const response = await axios.post(
+      GMAIL_API_URL,
+      { raw: rawMessage },
+      {
+        headers: {
+          Authorization: `Basic ${Buffer.from(
+            `${process.env.GMAIL_SENDER}:${process.env.GMAIL_APP_PASSWORD}`
+          ).toString("base64")}`,
+          "Content-Type": "application/json"
+        }
+      }
+    );
 
     res.json({ success: true });
 
   } catch (error) {
-    console.error("Email sending failed:", error);
+    console.error("Email sending failed:", error.response?.data || error.message);
     res.json({ success: false });
   }
 });

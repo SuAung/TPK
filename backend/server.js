@@ -1,28 +1,34 @@
 import express from "express";
 import cors from "cors";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 const app = express();
+app.use(express.json());
+
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"]
 }));
+app.options("*", cors());
 
-app.options("*", cors()); // VERY IMPORTANT
-app.use(express.json());
-
-// Initialize Resend
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Gmail App Password transporter (HTTPS, not SMTP ports)
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_SENDER,
+    pass: process.env.GMAIL_APP_PASSWORD
+  }
+});
 
 app.post("/send-email", async (req, res) => {
   const { company, companyKana, person, personKana, email, phone, inquiry } = req.body;
 
   try {
-    const result = await resend.emails.send({
-      from: "TPKホームお問い合わせ <noreply@onresend.com>",
-      to: "susuaung87@gmail.com",
-      reply_to: email,
+    const mailOptions = {
+      from: process.env.GMAIL_SENDER,
+      to: process.env.GMAIL_SENDER,
+      replyTo: email,
       subject: "新しいお問い合わせが届きました",
       text: `
 会社名: ${company}
@@ -35,9 +41,10 @@ app.post("/send-email", async (req, res) => {
 お問い合わせ内容:
 ${inquiry}
       `
-    });
+    };
 
-    console.log("Email sent:", result);
+    await transporter.sendMail(mailOptions);
+
     res.json({ success: true });
 
   } catch (error) {
@@ -46,6 +53,5 @@ ${inquiry}
   }
 });
 
-// Render uses PORT environment variable
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));

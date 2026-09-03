@@ -1,5 +1,10 @@
+
+emailjs.init({
+publicKey: "__A-_o7kIQo45NstL" /* Public key from Emailjs */
+});
 const form = document.getElementById("contactForm");
 const ids = ["company","companyKana","person","personKana","email","emailConfirm","phone","inquiry"];
+
 
 document.getElementById("inquiry").addEventListener("input", e => {
   document.getElementById("count").textContent = e.target.value.length;
@@ -90,8 +95,8 @@ function edit(){
 async function complete() {
 
   console.log("We are in complete function....");
-  // Collect form values
-  const data = {
+
+  const templateParams = {
     company: val("company"),
     companyKana: val("companyKana"),
     person: val("person"),
@@ -100,34 +105,35 @@ async function complete() {
     phone: val("phone"),
     inquiry: val("inquiry")
   };
-  console.log("Before try....");
-  // Send to backend
-  try {
-    console.log("Trying to reach to backend....");
-    const response = await fetch("https://tpkobo.onrender.com/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-    console.log("Backend Reached!");
-    const result = await response.json();
 
-    if (result.success) {
-      // Show complete screen
-      document.getElementById("confirmScreen").classList.add("d-none");
-      document.getElementById("formScreen").classList.add("d-none");
-      document.getElementById("completeScreen").classList.remove("d-none");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      alert("メール送信に失敗しました。もう一度お試しください。");
-    }
+  try {
+
+    console.log("Sending email via EmailJS...");
+
+    const response = await emailjs.send(
+      "service_n2swzac",
+      "template_thhlghv",
+      templateParams
+    );
+
+    console.log("Email sent:", response);
+
+    document.getElementById("confirmScreen").classList.add("d-none");
+    document.getElementById("formScreen").classList.add("d-none");
+    document.getElementById("completeScreen").classList.remove("d-none");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
 
   } catch (error) {
-    alert("サーバーに接続できません。もう一度お試しください。");
-    console.error(error);
+
+    console.error("EmailJS Error:", error);
+
+    alert("メール送信に失敗しました。もう一度お試しください。");
   }
 }
-
 
 function goHome(e){
   // If you want to ALWAYS go home:

@@ -517,17 +517,26 @@
 }
 
 /* Card Style */
+/*    STAFF PROFILE CARD */
+
 .card {
     height: 400px;
+    position: relative;
+
     transition: 0.5s;
     background-size: cover;
     background-position: center;
+
+    /* Existing hover effect */
     transition: transform .4s ease;
+
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: scale(1.08);
-}
+
+/* 
+  CARD HOVER OVERLAY EFFECT
+ */
 
 .card::before,
 .card::after {
@@ -536,11 +545,15 @@
     right: 0;
     bottom: 0;
     left: 0;
+
     transform: scale3d(0, 0, 1);
     transition: transform .3s ease-out 0s;
+
     background: rgba(255, 255, 255, 0.1);
     content: '';
     pointer-events: none;
+
+    z-index: 10;
 }
 
 .card::before {
@@ -551,6 +564,12 @@
     transform-origin: right bottom;
 }
 
+
+/* Existing hover effect */
+.card:hover {
+    transform: scale(1.08);
+}
+
 .card:hover::before,
 .card:hover::after,
 .card:focus::before,
@@ -558,18 +577,327 @@
     transform: scale3d(1, 1, 1);
 }
 
+
+/* 
+   STAFF CARD FOOTER
+ */
+
 .card-footer {
     position: absolute;
-    background-color: #9c8b6a9c;
+
     bottom: 0;
     left: 0;
     width: 100%;
+
+    /*
+     * Keep your original background color
+     */
+    background-color: #9c8b6a9c;
+
     padding: 20px;
+
+    /*
+     * Keep your original footer behavior
+     */
     margin-top: 40%;
     z-index: 20;
+
     opacity: 0;
+
+    /*
+     * Smooth appearance when hovering
+     */
+    transition: opacity .3s ease;
 }
 
+
+/* Show profile information on hover */
 .card:hover .card-footer {
     opacity: 1;
 }
+
+
+/* 
+   STAFF NAME & POSITION
+ */
+
+.staff-header {
+    margin-bottom: 15px;
+}
+
+.staff-name {
+    margin: 0;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.staff-position {
+    display: inline-block;
+
+    margin-top: 4px;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* 
+   STAFF INFORMATION
+*/
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* Each information row */
+.staff-info-item {
+    display: flex;
+    align-items: flex-start;
+
+    font-size: 0.88rem;
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+
+/* Information label */
+.staff-label {
+    width: 100px;
+    min-width: 100px;
+
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Information value */
+.staff-value {
+    flex: 1;
+
+    color: #ffffff;
+}
+
+
+/* 
+   TEAM LANGUAGES
+    */
+
+.team-languages {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.language-heading {
+    margin-bottom: 18px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #8a7a5e;
+}
+
+
+/* 
+   FLAG ROW
+    */
+
+.language-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 22px;
+}
+
+
+/* Individual language */
+
+.language-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    animation: languageFloat 2.5s ease-in-out infinite;
+}
+
+
+/* Different animation timing */
+
+.language-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.language-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.language-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.language-item:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.language-item:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+
+/* 
+   FLAG CIRCLE
+    */
+
+.flag-circle {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(156, 139, 106, 0.10);
+
+    border: 2px solid rgba(250, 159, 2, 0.395);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    backdrop-filter: blur(6px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.flag-circle img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+/* 
+   HOVER
+    */
+
+.language-item:hover {
+    animation-play-state: paused;
+}
+
+.language-item:hover .flag-circle {
+    transform: translateY(-6px) scale(1.12);
+
+    background: rgba(156, 139, 106, 0.18);
+
+    border-color: rgba(156, 139, 106, 0.65);
+
+    box-shadow:
+        0 10px 25px rgba(80, 65, 45, 0.18),
+        0 0 18px rgba(156, 139, 106, 0.18);
+}
+
+.language-item:hover .flag-circle span {
+    transform: scale(1.08);
+}
+
+
+/* 
+   LANGUAGE NAME
+    */
+
+.language-name {
+    margin-top: 9px;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    color: #777;
+
+    opacity: 0;
+
+    transform: translateY(-5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.language-item:hover .language-name {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* 
+   FLOATING ANIMATION
+   */
+
+@keyframes languageFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* 
+   MOBILE
+   */
+
+@media (max-width: 576px) {
+
+    .language-row {
+        gap: 12px;
+    }
+
+    .flag-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .flag-circle span {
+        font-size: 23px;
+    }
+
+    .language-name {
+        font-size: 0.65rem;
+    }
+}
+
+
+

@@ -135,6 +135,15 @@ textarea.form-control{min-height:190px;resize:vertical}
 .agree{text-align:center;margin-top:18px;font-size:.8rem}
 .agree .error{margin-top:5px}
 
+/* Trunstile widget */
+.turnstile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
 /* Buttons */
 .actions{text-align:center;margin-top:35px}
 .btn-main{

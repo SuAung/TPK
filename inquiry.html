@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/inquiryForm.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer>
+    </script>
 </head>
 
 <body>
@@ -29,14 +31,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="allItems.html"><i
-                                class="fa-solid fa-table-list"></i>
+                    <li class="nav-item"><a class="nav-link" href="allItems.html"><i class="fa-solid fa-table-list"></i>
                             Products</a></li>
-                            <!--
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="itemsDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,14 +58,17 @@
                             Mojiko Branch</a></li>
                     <li class="nav-item"><a class="nav-link" href="onlineShop.html"><i class="fa-solid fa-store"></i>
                             オンラインショップ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i class="fa-solid fa-industry"></i>
+                    <li class="nav-item"><a class="nav-link" href="productProduction.html"><i
+                                class="fa-solid fa-industry"></i>
                             商品製作</a></li>
                     <li class="nav-item"><a class="nav-link" href="wholesale.html"><i class="fa-brands fa-shopify"></i>
                             卸売</a></li>
-                    <li class="nav-item"><a class="nav-link" href="companyInfo.html"><i class="fa-solid fa-circle-info"></i>
-                        会社情報</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inquiry.html"><i class="fa-solid fa-square-envelope"></i>
-                        問い合わせ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="companyInfo.html"><i
+                                class="fa-solid fa-circle-info"></i>
+                            会社情報</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inquiry.html"><i
+                                class="fa-solid fa-square-envelope"></i>
+                            問い合わせ</a></li>
                 </ul>
             </div>
         </div>
@@ -108,6 +112,9 @@
                     </div>
 
                     <form id="contactForm" novalidate>
+
+                        <input type="text" id="website" name="website" style="display:none" autocomplete="off">
+                        <!--This is the invisiable field for Honeypot spam trap-->
 
                         <div class="field">
                             <label class="label" for="company">
@@ -195,6 +202,11 @@
                             <div class="error" id="privacyError"></div>
                         </div>
 
+                        <!-- This is the verification check for spam. The sitekey is from cloudflare Turnstile -->
+                        <div class="turnstile-container">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAEyL_Sc3YNb0BQNQ">
+                            </div>
+                        </div>
                         <div class="actions">
                             <button class="btn-main" type="submit">入力内容を確認する　→</button>
                         </div>

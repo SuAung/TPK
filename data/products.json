@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "name": "Nami Fuji White",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Sakura Tree White",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Ninja White",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Nami Fuji Black",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Sakura Tree Black",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/5.png"
+  },
+  {
+    "id": 6,
+    "name": "Geisha",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/6.png"
+  },
+  {
+    "id": 7,
+    "name": "Number One Red",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/7.png"
+  },
+  {
+    "id": 8,
+    "name": "Number One Black",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/8.png"
+  },
+  {
+    "id": 9,
+    "name": "Number One White",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/9.png"
+  },
+  {
+    "id": 10,
+    "name": "Tokyo Red",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/Black",
+    "description": "Red/Black",
+    "image": "img/TShirts/10.png"
+  },
+  {
+    "id": 11,
+    "name": "Tokyo Black(Gold)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/11.png"
+  },
+  {
+    "id": 12,
+    "name": "Tokyo Black(White)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "Red/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/12.png"
+  },
+  {
+    "id": 13,
+    "name": "Tower Kaminarimon(White)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/13.png"
+  },
+  {
+    "id": 14,
+    "name": "Tower Kaminarimon(Black)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/14.png"
+  },
+  {
+    "id": 15,
+    "name": "Ninja Black",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "100/110/120/130/140/150 cm",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/15.png"
+  },
+  {
+    "id": 16,
+    "name": "Ninja White",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "100/110/120/130/140/150 cm",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/16.png"
+  },
+  {
+    "id": 17,
+    "name": "Bear and Tower",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "100/110/120/130/140/150 cm",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/17.png"
+  },
+  {
+    "id": 18,
+    "name": "Maiko Child",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "100/110/120/130/140/150 cm",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/18.png"
+  },
+  {
+    "id": 19,
+    "name": "Mameshiba Map",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "100/110/120/130/140/150 cm",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/19.png"
+  },
+  {
+    "id": 20,
+    "name": "Japan Map(Black)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/20.png"
+  },
+  {
+    "id": 21,
+    "name": "Japan Map(White)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/21.png"
+  },
+  {
+    "id": 22,
+    "name": "Tokyo Mameshiba",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/22.png"
+  },
+  {
+    "id": 23,
+    "name": "Kyoto Mameshiba",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/23.png"
+  },
+  {
+    "id": 24,
+    "name": "Osaka Mameshiba",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/24.png"
+  },
+  {
+    "id": 25,
+    "name": "Samurai(Black)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/25.png"
+  },
+  {
+    "id": 26,
+    "name": "Samurai(White)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/26.png"
+  },
+  {
+    "id": 27,
+    "name": "Nami Fuji White(Hoodie)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/27.png"
+  },
+  {
+    "id": 28,
+    "name": "Sakura Tree White(Sweater)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/28.png"
+  },
+  {
+    "id": 29,
+    "name": "Tower View Black(Sweater)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/29.png"
+  },
+  {
+    "id": 30,
+    "name": "Tower View White(Sweater)",
+    "category": "T-Shirt",
+    "price": "¥1300",
+    "size": "XS / S / M / L / XL / 2XL / 3XL",
+    "color": "White/Black",
+    "description": "100% Cotton T-Shirt printed in Japan.",
+    "image": "img/TShirts/30.png"
+  },
+  {
+    "id": 31,
+    "name": "Tokyo Black Bag",
+    "category": "Robin Ruth",
+    "price": "¥3700",
+    "size": "24 × 16 cm",
+    "color": "",
+    "description": "Robin Ruth Handbag.",
+    "image": "img/Bags/1.png"
+  },
+  {
+    "id": 32,
+    "name": "Tokyo White Bag",
+    "category": "Robin Ruth",
+    "price": "¥3700",
+    "size": "24 × 16 cm",
+    "color": "",
+    "description": "Robin Ruth Handbag.",
+    "image": "img/Bags/4.png"
+  },
+  {
+    "id": 33,
+    "name": "Tokyo Gray Bag",
+    "category": "Robin Ruth",
+    "price": "¥3700",
+    "size": "24 × 16 cm",
+    "color": "",
+    "description": "Robin Ruth Handbag.",
+    "image": "img/Bags/5.png"
+  },
+  {
+    "id": 34,
+    "name": "apan Gray Bag",
+    "category": "Robin Ruth",
+    "price": "¥3700",
+    "size": "24 × 16 cm",
+    "color": "",
+    "description": "Robin Ruth Handbag.",
+    "image": "img/Bags/2.png"
+  },
+  {
+    "id": 35,
+    "name": "Japn Beige Bag",
+    "category": "Robin Ruth",
+    "price": "¥3700",
+    "size": "24 × 16 cm",
+    "color": "",
+    "description": "Robin Ruth Handbag.",
+    "image": "img/Bags/3.png"
+  },
+  {
+    "id": 36,
+    "name": "Kaminarimon",
+    "category": "Magnet",
+    "price": "¥450",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/1.png"
+  },
+  {
+    "id": 37,
+    "name": "Tokyo Bridge",
+    "category": "Magnet",
+    "price": "¥450",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets2.png"
+  },
+  {
+    "id": 38,
+    "name": "Tokyo Fuji",
+    "category": "Magnet",
+    "price": "¥450",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/3.png"
+  },
+  {
+    "id": 39,
+    "name": "Hanabi",
+    "category": "Magnet",
+    "price": "¥450",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/4.png"
+  },
+  {
+    "id": 40,
+    "name": "Kaminarimon",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/5png"
+  },
+  {
+    "id": 41,
+    "name": "Daruma",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/6.png"
+  },
+  {
+    "id": 42,
+    "name": "Nihon",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/7.png"
+  },
+  {
+    "id": 43,
+    "name": "Tokyo",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/8.png"
+  },
+  {
+    "id": 44,
+    "name": "Fox",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/9.png"
+  },
+  {
+    "id": 45,
+    "name": "Bell",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/10.png"
+  },
+  {
+    "id": 46,
+    "name": "Red girl",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/11.png"
+  },
+  {
+    "id": 47,
+    "name": "Geisha",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/12.png"
+  },
+  {
+    "id": 48,
+    "name": "Ninja",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/13.png"
+  },
+  {
+    "id": 49,
+    "name": "Sumo small",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/14.png"
+  },
+  {
+    "id": 50,
+    "name": "Sumo Big",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/15.png"
+  },
+  {
+    "id": 51,
+    "name": "Geisha Gril",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/16png"
+  },
+  {
+    "id": 52,
+    "name": "Maneki Neko",
+    "category": "Magnet",
+    "price": "¥600",
+    "size": "",
+    "color": "",
+    "description": "Japan souvenir magnets",
+    "image": "img/Magnets/17.png"
+  },
+  {
+    "id": 53,
+    "name": "Tokyo Mao",
+    "category": "Mugs",
+    "price": "¥1000",
+    "size": "",
+    "color": "",
+    "description": "Porcelain Cup",
+    "image": "img/Mugs/1.png"
+  },
+  {
+    "id": 54,
+    "name": "Mix",
+    "category": "Mugs",
+    "price": "¥1000",
+    "size": "",
+    "color": "",
+    "description": "Porcelain Cup",
+    "image": "img/Mugs/2.png"
+  },
+  {
+    "id": 55,
+    "name": "Tower",
+    "category": "Mugs",
+    "price": "¥1000",
+    "size": "",
+    "color": "",
+    "description": "Porcelain Cup",
+    "image": "img/Mugs/3.png"
+  }
+]

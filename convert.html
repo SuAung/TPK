@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSV to JSON Converter</title>
+</head>
+<body>
+
+<input type="file" id="csvFile" accept=".csv">
+
+<script>
+document.getElementById("csvFile").addEventListener("change", function(event) {
+
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+        const lines = e.target.result.trim().split("\n");
+
+        const headers = lines[0].split(",");
+
+        const products = lines.slice(1).map(line => {
+
+            const values = line.split(",");
+
+            const obj = {};
+
+            headers.forEach((header, index) => {
+                obj[header.trim()] = values[index]?.trim() || "";
+            });
+
+            obj.id = Number(obj.id);
+
+            return obj;
+        });
+
+        console.log(products);
+
+        const json = JSON.stringify(products, null, 2);
+
+        const blob = new Blob(
+            [json],
+            { type: "application/json" }
+        );
+
+        const link = document.createElement("a");
+
+        link.href = URL.createObjectURL(blob);
+
+        link.download = "products.json";
+
+        link.click();
+    };
+
+    reader.readAsText(file);
+});
+</script>
+
+</body>
+</html>

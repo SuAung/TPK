@@ -1,0 +1,114 @@
+/* SHOPPING SECTION */
+
+.shopping-section {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+}
+
+
+/* CONTENT */
+
+.shopping-container {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.shopping-container h1 {
+    margin-bottom: 35px;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: #4f4639;
+}
+
+
+/* DESCRIPTION */
+
+.shopping-description {
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+.shopping-description p {
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.english-text {
+    color: #555;
+}
+
+.japanese-text {
+    color: #666;
+}
+
+
+/* SHOP BUTTON */
+
+.shop-button {
+    display: inline-block;
+
+    padding: 14px 38px;
+
+    background-color: #9c8b6a;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+
+    transition: 0.3s ease;
+}
+
+
+/* HOVER */
+
+.shop-button:hover {
+    background-color: #7f7056;
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+    .shopping-section {
+        padding: 60px 20px;
+    }
+
+    .shopping-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .shopping-description p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .shop-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}

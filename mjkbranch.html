@@ -81,7 +81,7 @@
         <div class="branch-container">
 
             <!-- PAGE TITLE -->
-            <div class="branch-heading reveal">
+            <div class="branch-heading">
                 <span class="section-label">OUR BRANCH</span>
                 <h1>Mojiko Branch</h1>
                 <div class="heading-line"></div>
@@ -92,7 +92,7 @@
                  CITY VIEW
                   -->
 
-            <div class="video-section city-section reveal">
+            <div class="video-section city-section">
 
                 <div class="video-title">
                     <span class="video-number">01</span>
@@ -103,8 +103,13 @@
                 </div>
 
                 <div class="video-frame">
-                    <video autoplay muted loop playsinline controls>
-                        <source src="video/CityView.mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline
+                           preload="metadata"
+                           controls
+                           poster="img/CityView.png">
+
+                        <source src="video/Cityview.mp4" type="video/mp4">
+
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -126,7 +131,7 @@
 
             <!-- SEPARATOR -->
 
-            <div class="section-separator reveal">
+            <div class="section-separator">
                 <span></span>
                 <i>✦</i>
                 <span></span>
@@ -137,7 +142,7 @@
                  SHOP VIEW
                   -->
 
-            <div class="video-section shop-section reveal">
+            <div class="video-section shop-section">
 
                 <div class="video-title">
                     <span class="video-number">02</span>
@@ -148,8 +153,13 @@
                 </div>
 
                 <div class="video-frame">
-                    <video autoplay muted loop playsinline controls>
+                    <video autoplay muted loop playsinline
+                           preload="metadata"
+                           controls
+                           poster="img/ShopView.png">
+
                         <source src="video/ShopView.mp4" type="video/mp4">
+
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -161,7 +171,7 @@
                  STORE INFORMATION
                   -->
 
-            <div class="store-information reveal">
+            <div class="store-information">
 
                 <div class="info-heading">
                     <span class="section-label">STORE INFORMATION</span>
@@ -361,7 +371,6 @@
 
         <!-- Bootstrap 5 JavaScript Bundle CDN -->
         <script src="https://jsdelivr.net"></script>
-        <script src="js/scrollup.js"></script>
 </body>
 
 </html>

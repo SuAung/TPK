@@ -11,21 +11,6 @@ body {
     font-family: Arial, sans-serif;
     color: #555;
 }
-/* ========================================
-   Scrollup Reveal Overwrite
-   ======================================== */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* ========================================
    MAIN SECTION
@@ -457,5 +442,227 @@ body {
 
     .info-heading h2 {
         font-size: 1.25rem;
+    }
+}
+
+/* ========================================
+   Souvenir Shop Banner
+======================================== */
+
+.souvenir-banner {
+    max-width: 1000px;
+    margin: 0 auto 75px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.souvenir-banner-heading {
+    margin-bottom: 28px;
+}
+
+.souvenir-banner-heading h2 {
+    margin: 8px 0 12px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #4f4639;
+    letter-spacing: 0.5px;
+}
+
+.souvenir-banner-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #777;
+}
+
+/* Image frame */
+
+.souvenir-image-frame {
+    position: relative;
+    overflow: hidden;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #e6e0d5;
+    border-radius: 6px;
+    box-shadow: 0 12px 35px rgba(65, 52, 35, 0.12);
+    transition: box-shadow 0.35s ease;
+}
+
+.souvenir-image-frame:hover {
+    box-shadow: 0 18px 45px rgba(65, 52, 35, 0.18);
+}
+
+.souvenir-image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .souvenir-banner {
+        margin-bottom: 55px;
+        padding: 0;
+    }
+
+    .souvenir-banner-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    .souvenir-banner-heading p {
+        font-size: 0.9rem;
+    }
+
+    .souvenir-image-frame {
+        padding: 5px;
+    }
+
+    .souvenir-image-caption {
+        padding: 13px 8px 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .souvenir-banner-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .souvenir-image-caption {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .souvenir-image-caption span:first-child {
+        font-size: 0.68rem;
+    }
+
+    .souvenir-image-caption span:last-child {
+        font-size: 0.72rem;
+    }
+}
+
+/* ========================================
+   City View Banner
+======================================== */
+
+.city-banner {
+    max-width: 1000px;
+    margin: 0 auto 55px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.city-banner-heading {
+    margin-bottom: 28px;
+}
+
+.city-banner-heading h2 {
+    margin: 8px 0 12px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #4f4639;
+    letter-spacing: 0.5px;
+}
+
+.city-banner-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #777;
+}
+
+/* Image frame */
+
+.city-image-frame {
+    position: relative;
+    overflow: hidden;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #e6e0d5;
+    border-radius: 6px;
+    box-shadow: 0 12px 35px rgba(65, 52, 35, 0.12);
+    transition: box-shadow 0.35s ease;
+}
+
+.city-image-frame:hover {
+    box-shadow: 0 18px 45px rgba(65, 52, 35, 0.18);
+}
+
+.city-image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+/* Image caption */
+
+.city-image-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 12px 10px;
+    color: #8a7a5e;
+}
+
+.city-image-caption span:first-child {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.city-image-caption span:last-child {
+    font-size: 0.78rem;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+    .city-banner {
+        margin-bottom: 45px;
+        padding: 0;
+    }
+
+    .city-banner-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    .city-banner-heading p {
+        font-size: 0.9rem;
+    }
+
+    .city-image-frame {
+        padding: 5px;
+    }
+
+    .city-image-caption {
+        padding: 13px 8px 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .city-banner-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .city-image-caption {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .city-image-caption span:first-child {
+        font-size: 0.68rem;
+    }
+
+    .city-image-caption span:last-child {
+        font-size: 0.72rem;
     }
 }

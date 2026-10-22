@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/mainStyle.css"> <!--common to all page-->
     <link rel="stylesheet" href="css/home.css"> <!-- For homepage only -->
+    <link rel="stylesheet" href="css/homeslide.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -37,22 +38,6 @@
                             Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="allItems.html"><i class="fa-solid fa-table-list"></i>
                             Products</a></li>
-                    <!--
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="itemsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-table-list"></i> Items
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="itemsDropdown">
-                            <li><a class="dropdown-item" href="SidebarItem.html">T-shirts</a></li>
-                            <li><a class="dropdown-item" href="#">RobinRuth</a></li>
-                            <li><a class="dropdown-item" href="#">Magnets</a></li>
-                            <li><a class="dropdown-item" href="#">Keychains</a></li>
-                            <li><a class="dropdown-item" href="#">Flag Pin</a></li>
-                            <li><a class="dropdown-item" href="#">Victorinox</a></li>
-                            <li><a class="dropdown-item" href="#">Others..</a></li>
-                        </ul>
-                    </li>-->
                     <li class="nav-item"><a class="nav-link" href="mjkbranch.html"><i
                                 class="fa-solid fa-people-group"></i>
                             Mojiko Branch</a></li>
@@ -75,132 +60,120 @@
     </nav>
 
     <!-- SLIDE SHOW SECTION -->
-    <section class="hero reveal">
+    <section class="hero" aria-label="Company highlights">
+      <div class="hero-slides">
+        <!-- Replace these image URLs -->
+        <!-- Img 01 -->
+        <article class="hero-slide is-active" aria-hidden="false">
+          <img src="img/hats.jpg" alt="Traditional Japanese street and architecture" fetchpriority="high">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> THOUGHTFULLY SELECTED</p>
+            <h1>Bringing a piece<br>of Japan to the world.</h1>
+            <p class="hero-description">Discover carefully selected souvenirs and products that connect people with the
+              places they love.</p>
+            <a class="hero-cta" href="productProduction.html">Explore our products <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <!-- Img 02 -->
+        <article class="hero-slide" aria-hidden="true">
+          <img src="img/kc.jpg" alt="Japanese cultural destination" loading="lazy">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> MADE TO BE REMEMBERED</p>
+            <h2>Meaningful products.<br>Lasting impressions.</h2>
+            <p class="hero-description">From everyday essentials to memorable gifts, we help every product tell a story.
+            </p>
+            <a class="hero-cta" href="companyInfo.html">Discover our story <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <!-- Img 03 -->
+        <article class="hero-slide" aria-hidden="true">
+          <img src="img/socks.jpg" alt="Atmospheric view of a Japanese city" loading="lazy">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> YOUR TRUSTED PARTNER</p>
+            <h2>Good products.<br>Stronger partnerships.</h2>
+            <p class="hero-description">Reliable product selection and wholesale support for businesses building
+              something special.</p>
+            <a class="hero-cta" href="wholesale.html">Work with us <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <!-- Img 04 -->
+        <article class="hero-slide is-active" aria-hidden="false">
+          <img src="img/magnets.jpg" alt="Traditional Japanese street and architecture" fetchpriority="high">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> THOUGHTFULLY SELECTED</p>
+            <h1>Bringing a piece<br>of Japan to the world.</h1>
+            <p class="hero-description">Discover carefully selected souvenirs and products that connect people with the
+              places they love.</p>
+            <a class="hero-cta" href="productProduction.html">Explore our products <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <!-- Img 05 -->
+        <article class="hero-slide is-active" aria-hidden="false">
+          <img src="img/headband.jpg" alt="Traditional Japanese street and architecture" fetchpriority="high">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> MADE TO BE REMEMBERED</p>
+            <h2>Meaningful products.<br>Lasting impressions.</h2>
+            <p class="hero-description">From everyday essentials to memorable gifts, we help every product tell a story.
+            </p>
+            <a class="hero-cta" href="companyInfo.html">Discover our story <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <!-- Img 06 -->
+        <article class="hero-slide is-active" aria-hidden="false">
+          <img src="img/bags.jpg" alt="Traditional Japanese street and architecture" fetchpriority="high">
+          <div class="slide-shade"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> YOUR TRUSTED PARTNER</p>
+            <h2>Good products.<br>Stronger partnerships.</h2>
+            <p class="hero-description">Reliable product selection and wholesale support for businesses building
+              something special.</p>
+            <a class="hero-cta" href="wholesale.html">Work with us <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
 
-        <!-- Slides -->
-        <div class="slides">
-
-            <!-- Slide 1 -->
-            <div class="slide active">
-
-                <!-- Blurred background -->
-                <div class="slide-bg" style="background-image:url('img/Tee\ \(1\).png')">
-                </div>
-
-                <!-- Dark overlay -->
-                <div class="overlay"></div>
-
-                <!-- Actual product image -->
-                <img class="product-image" src="img/Tee (1).png" alt="">
-
-                <div class="content">
-                    <h2>Slide One</h2>
-                    <p>
-                        Premium quality product description goes here.
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Slide 2 -->
-
-            <div class="slide">
-
-                <!-- Blurred background -->
-                <div class="slide-bg" style="background-image:url('img/Tee\ \(2\).png')">
-                </div>
-
-                <!-- Dark overlay -->
-                <div class="overlay"></div>
-
-                <!-- Actual product image -->
-                <img class="product-image" src="img/Tee (2).png" alt="">
-
-                <div class="content">
-                    <h2>Slide Two</h2>
-                    <p>
-                        Premium quality product description goes here.
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Slide 3 -->
-
-            <div class="slide">
-
-                <!-- Blurred background -->
-                <div class="slide-bg" style="background-image:url('img/Tee\ \(3\).JPG')">
-                </div>
-
-                <!-- Dark overlay -->
-                <div class="overlay"></div>
-
-                <!-- Actual product image -->
-                <img class="product-image" src="img/Tee (3).JPG" alt="">
-
-                <div class="content">
-                    <h2>Slide Three</h2>
-                    <p>
-                        Premium quality product description goes here.
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Slide 4 -->
-
-            <div class="slide">
-
-                <!-- Blurred background -->
-                <div class="slide-bg" style="background-image:url('img/Tee\ \(4\).JPG')">
-                </div>
-
-                <!-- Dark overlay -->
-                <div class="overlay"></div>
-
-                <!-- Actual product image -->
-                <img class="product-image" src="img/Tee (4).jpg" alt="">
-
-                <div class="content">
-                    <h2>Slide Four</h2>
-                    <p>
-                        Premium quality product description goes here.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Arrows -->
-
-        <button class="arrow prev">&#10094;</button>
-
-        <button class="arrow next">&#10095;</button>
-
-        <!-- Pagination -->
-
-        <div class="dots">
-
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+      <div class="hero-bottom">
+        <div class="slide-progress" role="group" aria-label="Choose a slide">
+          <button class="progress-item is-active" type="button" aria-label="Show slide 1" aria-pressed="true">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
+          <button class="progress-item" type="button" aria-label="Show slide 2" aria-pressed="false">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
+          <button class="progress-item" type="button" aria-label="Show slide 3" aria-pressed="false">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
+          <button class="progress-item" type="button" aria-label="Show slide 4" aria-pressed="false">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
+          <button class="progress-item" type="button" aria-label="Show slide 5" aria-pressed="false">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
+          <button class="progress-item" type="button" aria-label="Show slide 6" aria-pressed="false">
+            <span class="progress-track"><span class="progress-fill"></span></span>
+          </button>
 
         </div>
 
+        <div class="hero-controls">
+          <span class="slide-count"><span id="current-slide">01</span><span
+              class="count-divider">/</span><span>06</span></span>
+          <button class="arrow-button previous-slide" type="button" aria-label="Previous slide">
+            <span aria-hidden="true">←</span>
+          </button>
+          <button class="arrow-button next-slide" type="button" aria-label="Next slide">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+      <span class="hero-edge-line" aria-hidden="true"></span>
     </section>
 
-    <!-- PROMO VID SECTION -->
-
-    <!-- Video Section -->
-     <!--
-    <div class="video-wrapper reveal">
-        <div class="video-title">Tokyo Print Kobo — Introduction Video</div>
-        <video id="tpkVideo" src="img/PRvideo .mp4" muted playsinline></video>
-    </div>
-    -->
     <!-- HERO SECTION -->
     <header id="home" class="bg-light py-3 border-bottom">
         <div class="container py-3">

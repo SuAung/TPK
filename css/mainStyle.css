@@ -16,6 +16,7 @@ body {
     /* Keeps the background fixed in place while you scroll */
     background-attachment: fixed;
     min-height: 100vh;
+      font-family: "DM Sans", Arial, sans-serif;
 }
 
 /* Banner Section */

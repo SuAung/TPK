@@ -132,14 +132,6 @@ a {
     color: #81765e;
 }
 
-.section-kicker {
-    margin: 0 0 9px;
-    color: var(--brown);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .25em
-}
-
 .hero-inner h1 span {
     margin-left: 14px;
     color: #a59b86;

@@ -1,33 +1,69 @@
-const reveals = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    } else {
-      entry.target.classList.remove('active');
+// =============================
+// Scroll Reveal Animation
+// =============================
+
+const reveals = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                // Stop observing after animation
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0,
+        rootMargin: "0px 0px -80px 0px"
     }
-  });
-}, {
-  threshold: 0.2
+);
+
+reveals.forEach(function (element) {
+    revealObserver.observe(element);
 });
 
-reveals.forEach(el => observer.observe(el));
 
-/* Video autoplay when visible */
+// =============================
+// Video Auto Play / Pause
+// =============================
 
-const video = document.getElementById('tpkVideo');
+const videos = document.querySelectorAll("video");
 
-const videoObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      video.play();     // auto-play when visible
-    } else {
-      video.pause();    // pause when not visible
+const videoObserver = new IntersectionObserver(
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+
+                video.play().catch(function () {});
+
+            } else {
+
+                video.pause();
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.3
     }
-  });
-}, {
-  threshold: 0.6   // 60% visible triggers play
-});
+);
 
-videoObserver.observe(video);
+videos.forEach(function (video) {
+    videoObserver.observe(video);
+});
